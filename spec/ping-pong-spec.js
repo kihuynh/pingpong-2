@@ -15,4 +15,12 @@ describe('pingPong', function() {
     var game = new pingPong(5)
     expect(game[4]).toEqual("pong");
   });
+  it('should say "ping-pong" if divisible by % 15', function () {
+    var game = new pingPong(15)
+    expect(game[14]).toEqual("ping-pong");
+  });
+  it('should say "4" if not divisible by anything', function () {
+    var game = new pingPong(4)
+    expect(game[3]).toEqual(4);
+  });
 });
